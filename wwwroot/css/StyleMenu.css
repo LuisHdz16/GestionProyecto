@@ -1,0 +1,16 @@
+﻿#sidebar {
+    min-height: 100vh; /* Full height */
+    background-color: #343a40; /* Dark background */
+}
+
+    #sidebar .nav-link {
+        color: #fff; /* White text */
+    }
+
+        #sidebar .nav-link.active {
+            background-color: #007bff; /* Active link with blue background */
+        }
+
+        #sidebar .nav-link:hover {
+            background-color: #495057; /* Slightly lighter on hover */
+        }

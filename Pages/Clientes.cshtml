@@ -1,0 +1,38 @@
+﻿@page
+@model CRM.Pages.ClientesModel
+@{
+    ViewData["Title"] = "Clientes Registrados";
+}
+
+<h2>Clientes Registrados</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Clientes.Count > 0)
+        {
+            foreach (var cliente in Model.Clientes)
+            {
+                <tr>
+                    <td>@cliente.Nombre</td>
+                    <td>@cliente.Apellido</td>
+                    <td>@cliente.Telefono</td>
+                    <td>@cliente.Email</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4">No hay clientes registrados.</td>
+            </tr>
+        }
+    </tbody>
+</table>

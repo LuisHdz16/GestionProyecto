@@ -1,0 +1,2 @@
+Cliente: fadsf Hdz, Tratamiento: Tratamiento A, Encargado: Persona 1, Monto: 300, Fecha: 2024-10-11
+Cliente: fadsf sadfasdf, Tratamiento: Tratamiento B, Encargado: Persona 2, Monto: 1000, Fecha: 2024-10-12

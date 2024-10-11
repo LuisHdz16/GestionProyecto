@@ -1,0 +1,32 @@
+﻿@page
+@model CRM.Pages.AgregarClienteModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>Formulario de Clientes</h2>
+<form method="post" class="needs-validation" novalidate id="purchaseForm">
+    <label asp-for="Name" for="Name">Nombre:</label><br>
+    <input asp-for="Name" type="text" id="Name" name="Name" required><br>
+    <span asp-validation-for="Name" class="text-danger"></span><br>
+
+    <label asp-for="LastName" for="LastName">Apellido:</label><br>
+    <input asp-for="LastName" type="text" id="LastName" name="LastName" required><br>
+    <span asp-validation-for="LastName" class="text-danger"></span><br>
+
+    <label asp-for="Telefono" for="Telefono">Teléfono:</label><br>
+    <input asp-for="Telefono" type="tel" id="Telefono" name="Telefono" required pattern="[0-9]{10}" title="Debe ser un número de 10 dígitos"><br>
+    <span asp-validation-for="Telefono" class="text-danger"></span><br>
+
+
+    <label asp-for="Email" for="Email">Correo electrónico:</label><br>
+    <input asp-for="Email" type="email" id="Email" name="Email" required><br>
+    <span asp-validation-for="Email" class="text-danger"></span><br>
+
+
+    <button type="submit" class="btn btn-success mt-3">Agregar Cliente</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

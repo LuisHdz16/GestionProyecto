@@ -1,0 +1,40 @@
+﻿@page
+@model CRM.Pages.VerTratamientosModel
+@{
+    ViewData["Title"] = "Registros de Tratamientos";
+}
+
+<h2>Registros de Tratamientos</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Tratamiento</th>
+            <th>Encargado</th>
+            <th>Monto</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Tratamientos.Count > 0)
+        {
+            foreach (var tratamiento in Model.Tratamientos)
+            {
+                <tr>
+                    <td>@tratamiento.Cliente</td>
+                    <td>@tratamiento.Tratamiento_</td>
+                    <td>@tratamiento.Encargado</td>
+                    <td>@tratamiento.Monto</td>
+                    <td>@tratamiento.Fecha</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5">No hay tratamientos registrados.</td>
+            </tr>
+        }
+    </tbody>
+</table>
