@@ -1,4 +1,4 @@
-Nombre: fadsf sadfasdf Telefono: 1234567890 Correo: fsdaf@gmail.com
-Nombre: dsaf fdsafasdf Telefono: 12874324 Correo: fsdafadf@gmail.com
-Nombre: fadsf Hdz Telefono: 1234567891 Correo: fsdaffsdaf@gmail.com
-Nombre: Luis sdaf Telefono: 8123695822 Correo: fsdaf@gmail.com
+Nombre: Luis Hdz Telefono: 199999 Correo: fsdaf@gmail.com
+Nombre: fadsf sdaf Telefono: 1234567891 Correo: fsdaf@gmail.com
+Nombre: Mario Cantu Telefono: 123456789 Correo: luis1614@gmail.com
+Nombre: Toñito Ortega Telefono: 1234 Correo: tonito@hotmail.com

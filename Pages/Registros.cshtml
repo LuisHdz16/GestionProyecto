@@ -1,10 +1,11 @@
 ﻿@page
 @model CRM.Pages.RegistroTratamientosModel
 @{
-    ViewData["Title"] = "Registro de Tratamientos";
+    ViewData["Title"] = "AGREGAR REGISTRO";
 }
 
-<h2>Registrar Tratamiento</h2>
+<a href="/VerRegistros" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Regresar</a>
+
 
 <form method="post" class="needs-validation" novalidate>
     <label for="Cliente">Nombre del Cliente:</label><br>
@@ -19,19 +20,21 @@
 
     <label for="Tratamiento">Tratamiento realizado:</label><br>
     <select asp-for="Tratamiento" id="Tratamiento" required>
-        <option value="">Seleccione un tratamiento</option>
-        <option value="Tratamiento A">Tratamiento A</option>
-        <option value="Tratamiento B">Tratamiento B</option>
-        <option value="Tratamiento C">Tratamiento C</option>
+        <option value="">Seleccione un Tratamiento</option>
+        @foreach (var tratamiento in Model.Tratamientos_)
+        {
+            <option value="@tratamiento">@tratamiento</option>
+        }
     </select><br>
     <span asp-validation-for="Tratamiento" class="text-danger"></span><br>
 
     <label for="Encargado">Persona encargada:</label><br>
     <select asp-for="Encargado" id="Encargado" required>
         <option value="">Seleccione una persona</option>
-        <option value="Persona 1">Persona 1</option>
-        <option value="Persona 2">Persona 2</option>
-        <option value="Persona 3">Persona 3</option>
+        @foreach (var persona in Model.Personaencargada)
+        {
+            <option value="@persona">@persona</option>
+        }
     </select><br>
     <span asp-validation-for="Encargado" class="text-danger"></span><br>
 

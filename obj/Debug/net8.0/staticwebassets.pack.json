@@ -429,8 +429,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\personasEncargadas.txt",
+      "PackagePath": "staticwebassets\\personasEncargadas.txt"
+    },
+    {
+      "Id": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\promociones.txt",
+      "PackagePath": "staticwebassets\\promociones.txt"
+    },
+    {
       "Id": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\tratamientos.txt",
       "PackagePath": "staticwebassets\\tratamientos.txt"
+    },
+    {
+      "Id": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\tratamientosdata.txt",
+      "PackagePath": "staticwebassets\\tratamientosdata.txt"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CRM.Microsoft.AspNetCore.StaticWebAssets.props",

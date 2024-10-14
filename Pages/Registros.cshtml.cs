@@ -31,15 +31,19 @@ namespace CRM.Pages
         public string? Fecha { get; set; }
 
         public List<string> Clientes { get; set; } = new List<string>();
+        public List<string> Tratamientos_ { get; set; } = new List<string>();
+        public List<string> Personaencargada { get; set; } = new List<string>();
 
         public void OnGet()
         {
             // Cargar clientes registrados desde el archivo
-            string filePath = "wwwroot/formdata.txt";
+            string filePathClientes = "wwwroot/formdata.txt";
+            string filePathTratamientos = "wwwroot/tratamientosdata.txt";
+            string filePathPersona = "wwwroot/personasEncargadas.txt";
 
-            if (System.IO.File.Exists(filePath))
+            if (System.IO.File.Exists(filePathClientes))
             {
-                var lines = System.IO.File.ReadAllLines(filePath);
+                var lines = System.IO.File.ReadAllLines(filePathClientes);
 
                 foreach (var line in lines)
                 {
@@ -48,6 +52,33 @@ namespace CRM.Pages
                     {
                         var nombres = data[0].Split(' ');
                         Clientes.Add($"{nombres[0]} {nombres[1]}");
+                    }
+                }
+            }
+            if (System.IO.File.Exists(filePathTratamientos))
+            {
+                var lines_ = System.IO.File.ReadAllLines(filePathTratamientos);
+
+                foreach (var line in lines_)
+                {
+                    var data = line.Split(new string[] { "Tratamiento: ", " Precio: " }, StringSplitOptions.RemoveEmptyEntries);
+                    if (data.Length == 2)
+                    {
+                        Tratamientos_.Add($"{data[0]}");
+                    }
+                }
+            }
+            if (System.IO.File.Exists(filePathPersona))
+            {
+                var lines_ = System.IO.File.ReadAllLines(filePathPersona);
+
+                foreach (var line in lines_)
+                {
+                    var data = line.Split(new string[] {"Nombre: ", " Puesto: "}, StringSplitOptions.RemoveEmptyEntries);
+                    if (data.Length == 2)
+                    {
+                        var nombres = data[0].Split(',');
+                        Personaencargada.Add($"{data[0]}");
                     }
                 }
             }
@@ -62,7 +93,7 @@ namespace CRM.Pages
 
             // Guardar el registro del tratamiento en un archivo de texto
             string filePath = "wwwroot/tratamientos.txt";
-            string tratamientoData = $"Cliente: {Cliente}, Tratamiento: {Tratamiento}, Encargado: {Encargado}, Monto: {Monto}, Fecha: {Fecha}\n";
+            string tratamientoData = $"Cliente: {Cliente} Tratamiento: {Tratamiento} Encargado: {Encargado} Monto: {Monto} Fecha: {Fecha}\n";
             System.IO.File.AppendAllTextAsync(filePath, tratamientoData);
 
             TempData["SuccessMessage"] = "Tratamiento registrado exitosamente!";

@@ -1,4 +1,65 @@
 ﻿@page
 @model CRM.Pages.IndexModel
 @{
+    ViewData["Title"] = "Inicio - CRM de JOE&MARIA";
 }
+
+<div class="container mt-5">
+    <h1>Bienvenido al Sistema de CRM</h1>
+    <p class="lead">Gestiona clientes, tratamientos y personas encargadas de manera eficiente.</p>
+
+    <div class="row">
+        <!-- Sección de Clientes -->
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Clientes</div>
+                <div class="card-body">
+                    <h5 class="card-title">Gestión de Clientes</h5>
+                    <p class="card-text">Añade nuevos clientes, visualiza el registro completo y busca clientes fácilmente.</p>
+                    <a href="/Clientes" class="btn btn-light">Ver Clientes</a>
+                    <a href="/AgregarCliente" class="btn btn-light">Agregar Cliente</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Tratamientos -->
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-header">Tratamientos</div>
+                <div class="card-body">
+                    <h5 class="card-title">Registro de Tratamientos</h5>
+                    <p class="card-text">Administra los tratamientos realizados a los clientes, incluye costos y encargados.</p>
+                    <a href="/VerTratamientos" class="btn btn-light">Ver Tratamientos</a>
+                    <a href="/RegistrarTratamientos" class="btn btn-light">Registrar Tratamiento</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Personas Encargadas -->
+        <div class="col-md-4">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-header">Personas Encargadas</div>
+                <div class="card-body">
+                    <h5 class="card-title">Gestión de Personas Encargadas</h5>
+                    <p class="card-text">Administra el equipo que se encarga de los procedimientos estéticos.</p>
+                    <a href="/VerPersonasEncargadas" class="btn btn-light">Personal Encargado</a>
+                    <a href="/AgregarPersonaEncargada" class="btn btn-light">Registrar Personal Encargado</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resumen General -->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">Resumen General</div>
+                <div class="card-body">
+                    <h5 class="card-title">Estadísticas de la Empresa</h5>
+                    <p>En esta sección podrás ver el resumen de las actividades más importantes.</p>
+                    <!-- Aquí puedes agregar estadísticas u otros detalles si es necesario -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -28,3 +28,4 @@ E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\pruebaSoftware\CRM\CRM
 E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\pruebaSoftware\CRM\CRM\obj\Debug\net8.0\CRM.pdb
 E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\pruebaSoftware\CRM\CRM\obj\Debug\net8.0\CRM.genruntimeconfig.cache
 E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\pruebaSoftware\CRM\CRM\obj\Debug\net8.0\ref\CRM.dll
+E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\pruebaSoftware\CRM\CRM\obj\Debug\net8.0\CRM.sourcelink.json

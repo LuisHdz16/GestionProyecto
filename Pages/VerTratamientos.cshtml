@@ -1,19 +1,16 @@
 ﻿@page
 @model CRM.Pages.VerTratamientosModel
 @{
-    ViewData["Title"] = "Registros de Tratamientos";
+    ViewData["Title"] = "Ver Tratamientos";
 }
 
-<h2>Registros de Tratamientos</h2>
+<a href="/RegistrarTratamientos" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Agregar Tratamientos</a>
 
-<table class="table table-bordered">
+<table class="table table-bordered mt-4">
     <thead>
         <tr>
-            <th>Cliente</th>
-            <th>Tratamiento</th>
-            <th>Encargado</th>
-            <th>Monto</th>
-            <th>Fecha</th>
+            <th>Nombre del Tratamiento</th>
+            <th>Precio</th>
         </tr>
     </thead>
     <tbody>
@@ -22,18 +19,15 @@
             foreach (var tratamiento in Model.Tratamientos)
             {
                 <tr>
-                    <td>@tratamiento.Cliente</td>
-                    <td>@tratamiento.Tratamiento_</td>
-                    <td>@tratamiento.Encargado</td>
-                    <td>@tratamiento.Monto</td>
-                    <td>@tratamiento.Fecha</td>
+                    <td>@tratamiento.Nombre</td>
+                    <td>@tratamiento.Precio</td>
                 </tr>
             }
         }
         else
         {
             <tr>
-                <td colspan="5">No hay tratamientos registrados.</td>
+                <td colspan="2">No se encontraron tratamientos registrados.</td>
             </tr>
         }
     </tbody>

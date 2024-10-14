@@ -22,8 +22,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWdyZWdhckNsaWVudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/AgregarPersonaEncargada.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWdyZWdhclBlcnNvbmFFbmNhcmdhZGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/AgregarPromocion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWdyZWdhclByb21vY2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/Clientes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/EditarPersonaEncargada.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdGFyUGVyc29uYUVuY2FyZ2FkYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/EditarPromocion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdGFyUHJvbW9jaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/Error.cshtml]
@@ -34,12 +50,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/RegistroTratamientos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9UcmF0YW1pZW50b3MuY3NodG1s
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/RegistrarTratamientos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cmFyVHJhdGFtaWVudG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/Registros.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/VerPersonasEncargadas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVyUGVyc29uYXNFbmNhcmdhZGFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/VerPromociones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVyUHJvbW9jaW9uZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/VerRegistros.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVyUmVnaXN0cm9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/pruebaSoftware/CRM/CRM/Pages/VerTratamientos.cshtml]

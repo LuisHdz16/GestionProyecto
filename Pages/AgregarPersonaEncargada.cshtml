@@ -1,0 +1,21 @@
+﻿@page
+@model CRM.Pages.AgregarPersonaEncargadaModel
+@{
+    ViewData["Title"] = "Agregar Persona Encargada";
+}
+
+<a href="/VerPersonasEncargadas" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Regresar</a>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Nombre">Nombre:</label>
+        <input asp-for="Nombre" type="text" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Puesto">Puesto:</label>
+        <input asp-for="Puesto" type="text" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">Agregar Persona</button>
+</form>

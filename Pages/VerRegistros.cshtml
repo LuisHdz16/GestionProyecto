@@ -1,0 +1,40 @@
+﻿@page
+@model CRM.Pages.VerRegistroModel
+@{
+    ViewData["Title"] = "REGISTROS";
+}
+
+<a href="/Registros" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Agregar Registro</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Tratamiento</th>
+            <th>Encargado</th>
+            <th>Monto</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Registros.Count > 0)
+        {
+            foreach (var re in Model.Registros)
+            {
+                <tr>
+                    <td>@re.Cliente</td>
+                    <td>@re.Tratamiento_</td>
+                    <td>@re.Encargado</td>
+                    <td>@re.Monto</td>
+                    <td>@re.Fecha</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5">No hay tratamientos registrados.</td>
+            </tr>
+        }
+    </tbody>
+</table>

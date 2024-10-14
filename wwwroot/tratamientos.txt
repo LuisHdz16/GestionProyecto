@@ -1,2 +1,2 @@
-Cliente: fadsf Hdz, Tratamiento: Tratamiento A, Encargado: Persona 1, Monto: 300, Fecha: 2024-10-11
-Cliente: fadsf sadfasdf, Tratamiento: Tratamiento B, Encargado: Persona 2, Monto: 1000, Fecha: 2024-10-12
+Cliente: Luis Hdz Tratamiento: Tratamiento A Encargado: Juan Lopez Monto: 100000 Fecha: 2024-10-13
+Cliente: Toñito Ortega Tratamiento: Tratamiento b Encargado: Angelito  Monto: 1000 Fecha: 2024-10-17

@@ -1,0 +1,43 @@
+﻿@page
+@model CRM.Pages.VerPromocionesModel
+@{
+    ViewData["Title"] = "PROMOCIONES";
+}
+
+<a href="/AgregarPromocion" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Agregar Promocion</a>
+
+<a href="/EnviarPromoción" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Enviar Promoción</a>
+
+@if (Model.Promociones.Count > 0)
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Final</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var promo in Model.Promociones)
+            {
+                <tr>
+                    <td>@promo.Descripcion</td>
+                    <td>@promo.FechaInicio.ToShortDateString()</td>
+                    <td>@promo.FechaFinal.ToShortDateString()</td>
+                    <td>
+                        <a asp-page="EditarPromocion" asp-route-id="@promo.Id" class="btn btn-warning btn-sm">Editar</a>
+                        <form method="post" asp-page-handler="Eliminar" asp-route-id="@promo.Id" style="display:inline;">
+                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay promociones registradas.</p>
+}
