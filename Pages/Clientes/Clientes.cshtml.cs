@@ -16,17 +16,17 @@ namespace CRM.Pages
             if (System.IO.File.Exists(filePath))
             {
                 var lines = System.IO.File.ReadAllLines(filePath);
+                int id = 1;
 
                 foreach (var line in lines)
                 {
                     var data = line.Split(new string[] { "Nombre: ", " Telefono: ", " Correo: " }, StringSplitOptions.RemoveEmptyEntries);
                     if (data.Length == 3)
                     {
-                        var nombres = data[0].Split(' ');
                         Clientes.Add(new Cliente
                         {
-                            Nombre = nombres[0],
-                            Apellido = nombres[1],
+                            Id = id++,
+                            Nombre = data[0],
                             Telefono = data[1],
                             Email = data[2]
                         });
@@ -34,12 +34,28 @@ namespace CRM.Pages
                 }
             }
         }
+
+        public IActionResult OnPostDelete(int id)
+        {
+            string filePath = "wwwroot/formdata.txt";
+            if (System.IO.File.Exists(filePath))
+            {
+                var lines = System.IO.File.ReadAllLines(filePath).ToList();
+                if (id >= 1 && id <= lines.Count)
+                {
+                    lines.RemoveAt(id - 1); // Remover la persona por ID
+                    System.IO.File.WriteAllLines(filePath, lines);
+                }
+            }
+
+            return RedirectToPage();
+        }
     }
 
     public class Cliente
     {
+        public int Id { get; set; }
         public string? Nombre { get; set; }
-        public string? Apellido { get; set; }
         public string? Telefono { get; set; }
         public string? Email { get; set; }
     }

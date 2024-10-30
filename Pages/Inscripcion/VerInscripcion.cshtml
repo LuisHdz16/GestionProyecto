@@ -1,0 +1,53 @@
+﻿@page
+@model CRM.Pages.VerIncripcionModel
+@{
+}
+<a href="~/Inscripcion/InscripcionCursos" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Agregar Curso</a>
+
+
+<table class="table table-bordered mt-4">
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Curso</th>
+            <th>FechaInicio</th>
+            <th>FechaFin</th>
+            <th>Duracion</th>
+            <th>Precio</th>
+            <th>Estatus</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.InscripcionRegistrados.Count > 0)
+        {
+            foreach (var curso in Model.InscripcionRegistrados)
+            {
+                <tr>
+                    <td>@curso.Cliente</td>
+                    <td>@curso.Curso</td>
+                    <td>@curso.FechaInicio</td>
+                    <td>@curso.FechaFin</td>
+                    <td>@curso.Duracion</td>
+                    <td>@curso.Precio</td>
+                    <td>@curso.Estatus</td>
+                    <td>
+                        <a asp-page="EditarInscripcion" asp-route-id="@curso.Id" class="btn btn-warning">Editar</a>
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@curso.Id" class="d-inline">
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+
+        }
+
+        else
+
+        {
+            <tr>
+                <td colspan="3">No se encontraron Inscripciones registradas.</td>
+            </tr>
+        }
+    </tbody>
+</table>

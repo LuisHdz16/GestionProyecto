@@ -1,0 +1,44 @@
+﻿@page
+@model CRM.Pages.AgregarPromocionModel
+@{
+    ViewData["Title"] = "Agregar Promoción";
+}
+
+<a href="~/Promocion/VerPromociones" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Regresar</a>
+
+<form method="post" class="needs-validation" novalidate>
+    <div class="form-group">
+        <label asp-for="Tratamiento">Tratamiento:</label>
+        <select asp-for="Tratamiento" class="form-control" required>
+            <option value="">Seleccione un tratamiento</option>
+            @foreach (var tratamiento in Model.Tratamientos_)
+            {
+                <option value="@tratamiento">@tratamiento</option>
+            }
+        </select>
+        <span asp-validation-for="Tratamiento" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descripcion">Descripción:</label>
+        <input asp-for="Descripcion" type="text" class="form-control" required />
+        <span asp-validation-for="Descripcion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PrecioNuevo">Precio Nuevo:</label>
+        <input asp-for="PrecioNuevo" type="number" step="0.01" class="form-control" required />
+        <span asp-validation-for="PrecioNuevo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Estatus">Estatus:</label>
+        <select asp-for="Estatus" class="form-control" required>
+            <option value="Disponible">Disponible</option>
+            <option value="No disponible">No disponible</option>
+        </select>
+        <span asp-validation-for="Estatus" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Agregar Promoción</button>
+</form>

@@ -1,0 +1,47 @@
+﻿@page
+@model CRM.Pages.VerCursosModel
+@{
+    ViewData["Title"] = "Lista de Cursos";
+}
+
+<a href="~/Cursos/AgregarCursos" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Agregar Curso</a>
+
+
+<table class="table table-bordered mt-4">
+    <thead>
+        <tr>
+            <th>Cursos</th>
+            <th>Descripcion</th>
+            <th>Estatus</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.CursosRegistrados.Count > 0)
+        {
+            foreach (var curso in Model.CursosRegistrados)
+            {
+                <tr>
+                    <td>@curso.Curso</td>
+                    <td>@curso.Descripcion</td>
+                    <td>@curso.Estatus</td>
+                    <td>
+                        <a asp-page="EditarCurso" asp-route-id="@curso.Id" class="btn btn-warning">Editar</a>
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@curso.Id" class="d-inline">
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+
+        }
+
+        else
+
+        {
+            <tr>
+                <td colspan="3">No se encontraron Cursos registrados.</td>
+            </tr>
+        }
+    </tbody>
+</table>

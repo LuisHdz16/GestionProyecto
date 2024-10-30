@@ -1,2 +1,0 @@
-Cliente: Luis Hdz Tratamiento: Tratamiento A Encargado: Juan Lopez Monto: 100000 Fecha: 2024-10-13
-Cliente: Toñito Ortega Tratamiento: Tratamiento b Encargado: Angelito  Monto: 1000 Fecha: 2024-10-17

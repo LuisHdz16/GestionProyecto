@@ -181,6 +181,10 @@
       "PackagePath": "staticwebassets\\CRM.bundle.scp.css"
     },
     {
+      "Id": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\citas.txt",
+      "PackagePath": "staticwebassets\\citas.txt"
+    },
+    {
       "Id": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\css\\StyleMenu.css",
       "PackagePath": "staticwebassets\\css\\StyleMenu.css"
     },
@@ -429,16 +433,8 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\personasEncargadas.txt",
-      "PackagePath": "staticwebassets\\personasEncargadas.txt"
-    },
-    {
       "Id": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\promociones.txt",
       "PackagePath": "staticwebassets\\promociones.txt"
-    },
-    {
-      "Id": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\tratamientos.txt",
-      "PackagePath": "staticwebassets\\tratamientos.txt"
     },
     {
       "Id": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\tratamientosdata.txt",

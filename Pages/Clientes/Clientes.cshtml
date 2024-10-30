@@ -4,15 +4,15 @@
     ViewData["Title"] = "CLIENTES";
 }
 
-<a href="/AgregarCliente" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Agregar Cliente</a>
+<a href="~/Clientes/AgregarCliente" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Agregar Cliente</a>
 
 <table class="table table-bordered">
     <thead>
         <tr>
             <th>Nombre</th>
-            <th>Apellido</th>
             <th>Teléfono</th>
             <th>Email</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -22,9 +22,15 @@
             {
                 <tr>
                     <td>@cliente.Nombre</td>
-                    <td>@cliente.Apellido</td>
                     <td>@cliente.Telefono</td>
                     <td>@cliente.Email</td>
+                    <td>
+                        <a asp-page="EditarCliente" asp-route-id="@cliente.Id" class="btn btn-warning">Editar</a>
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@cliente.Id" class="d-inline">
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                        <a asp-page="Registros" asp-route-id="@cliente.Id" class="btn btn-warning">Agendar Cita</a>
+                    </td>
                 </tr>
             }
         }

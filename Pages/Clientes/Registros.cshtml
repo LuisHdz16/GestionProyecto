@@ -1,0 +1,95 @@
+﻿@page
+@model AgregarCitaModel
+@{
+    ViewData["Title"] = "Agregar Cita";
+}
+
+<a href="~/Citas/VerRegistros" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Regresar</a>
+
+<form method="post" class="needs-validation" novalidate>
+    <label for="Cliente">Nombre del Cliente:</label><br>
+    <select asp-for="Cliente" id="Cliente" required>
+        <option value="">Seleccione un cliente</option>
+        @foreach (var cliente in Model.Clientes)
+        {
+            <option value="@cliente.Nombre">@cliente.Nombre</option>
+        }
+    </select><br>
+    <span asp-validation-for="Cliente" class="text-danger"></span><br>
+
+    <label for="Tratamiento">Tratamiento:</label><br>
+    <select asp-for="Tratamiento" id="Tratamiento" required onchange="cargarPromociones()">
+        <option value="">Seleccione un Tratamiento</option>
+        @foreach (var tratamiento in Model.Tratamientos_)
+        {
+            <option value="@tratamiento.Nombre" data-precio="@tratamiento.Precio">@tratamiento.Nombre</option>
+        }
+    </select>
+    <span asp-validation-for="Tratamiento" class="text-danger"></span><br>
+
+    <label for="Promocion">Promoción:</label><br>
+    <select asp-for="Promocion" id="Promocion" onchange="actualizarPrecio()">
+        <option value="">Seleccione una promoción</option>
+        @foreach (var promo in Model.PromocionesDisponibles)
+        {
+            <option value="@promo.Descripcion" data-precio="@promo.PrecioNuevo" data-tratamiento="@promo.Tratamiento">
+                @promo.Descripcion
+            </option>
+        }
+    </select>
+    <span asp-validation-for="Promocion" class="text-danger"></span><br>
+
+    <label asp-for="Precio">Precio:</label>
+    <input asp-for="Precio" id="Precio" type="text" class="form-control" readonly />
+    <span asp-validation-for="Precio" class="text-danger"></span><br>
+
+    <label asp-for="Fecha">Fecha:</label><br>
+    <input asp-for="Fecha" type="date" required /><br>
+    <span asp-validation-for="Fecha" class="text-danger"></span><br>
+
+    <label asp-for="Estatus">Estatus:</label><br>
+    <select asp-for="Estatus" class="form-control" required>
+        <option value="Próximamente">Próximamente</option>
+        <option value="Realizado">Realizado</option>
+        <option value="Cancelado">Cancelado</option>
+    </select><br>
+    <span asp-validation-for="Estatus" class="text-danger"></span><br>
+
+    <button type="submit" class="btn btn-success mt-3">Registrar Cita</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+       function cargarPromociones() {
+            const tratamientoSelect = document.getElementById("Tratamiento");
+            const tratamientoSeleccionado = tratamientoSelect.value;
+            const promocionSelect = document.getElementById("Promocion");
+
+            // Limpiar las opciones actuales de promociones
+            promocionSelect.innerHTML = '<option value="">Seleccione una promoción</option>';
+
+            // Obtener todas las promociones disponibles desde el HTML
+            const promociones = Array.from(document.querySelectorAll("#Promocion option[data-tratamiento]"));
+
+            // Filtrar las promociones que correspondan al tratamiento seleccionado
+            promociones.forEach(promo => {
+                if (promo.getAttribute("data-tratamiento") === tratamientoSeleccionado) {
+                    promocionSelect.appendChild(promo.cloneNode(true));
+                }
+            });
+
+            // Actualizar el precio del tratamiento
+            const tratamientoPrecio = tratamientoSelect.options[tratamientoSelect.selectedIndex].getAttribute("data-precio");
+            document.getElementById("Precio").value = tratamientoPrecio;
+        }
+        function actualizarPrecio() {
+            const promocionSelect = document.getElementById("Promocion");
+            const tratamientoPrecio = document.getElementById("Tratamiento").options[document.getElementById("Tratamiento").selectedIndex].getAttribute("data-precio");
+            const promocionPrecio = promocionSelect.options[promocionSelect.selectedIndex].getAttribute("data-precio");
+
+            document.getElementById("Precio").value = promocionPrecio ? promocionPrecio : tratamientoPrecio;
+        }
+    </script>
+
+}

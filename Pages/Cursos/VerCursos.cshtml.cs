@@ -1,62 +1,62 @@
+using CRM.Pages;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
 namespace CRM.Pages
 {
-    public class VerPromocionesModel : PageModel
+    public class VerCursosModel : PageModel
     {
-        public List<Promocion> Promociones { get; set; } = new List<Promocion>();
+        public List<VerCursos> CursosRegistrados { get; set; } = new List<VerCursos>();
 
         public void OnGet()
         {
-            string filePath = "wwwroot/promociones.txt";
-
+            string filePath = "wwwroot/Cursos.txt";
             if (System.IO.File.Exists(filePath))
             {
                 var lines = System.IO.File.ReadAllLines(filePath);
-
+                int id = 1;
                 foreach (var line in lines)
                 {
-                    var data = line.Split(new string[] { "Descripcion: ", ", FechaInicio: ", ", FechaFinal: " }, StringSplitOptions.RemoveEmptyEntries);
+                    var data = line.Split(new string[] { "Curso: ", "Descripcion: ", "Estatus: " }, System.StringSplitOptions.RemoveEmptyEntries);
                     if (data.Length == 3)
                     {
-                        Promociones.Add(new Promocion
+                        CursosRegistrados.Add(new VerCursos
                         {
-                            Id = Promociones.Count + 1,
-                            Descripcion = data[0],
-                            FechaInicio = DateTime.Parse(data[1]),
-                            FechaFinal = DateTime.Parse(data[2])
+                            Id = id++,
+                            Curso = data[0],
+                            Descripcion = data[1],
+                            Estatus = data[2]
                         });
                     }
                 }
             }
         }
 
-        public IActionResult OnPostEliminar(int id)
+        public IActionResult OnPostDelete(int id)
         {
-            string filePath = "wwwroot/promociones.txt";
+            string filePath = "wwwroot/Cursos.txt";
             if (System.IO.File.Exists(filePath))
             {
                 var lines = System.IO.File.ReadAllLines(filePath).ToList();
-                if (id >= 0 && id < lines.Count)
+                if (id >= 1 && id <= lines.Count)
                 {
-                    lines.RemoveAt(id);
+                    lines.RemoveAt(id - 1); // Remover la persona por ID
                     System.IO.File.WriteAllLines(filePath, lines);
                 }
             }
+
             return RedirectToPage();
         }
     }
 
-    public class Promocion
+    public class VerCursos
     {
         public int Id { get; set; }
+        public string? Curso { get; set; }
         public string? Descripcion { get; set; }
-        public DateTime FechaInicio { get; set; }
-        public DateTime FechaFinal { get; set; }
+        public string? Estatus { get; set; }
     }
 }

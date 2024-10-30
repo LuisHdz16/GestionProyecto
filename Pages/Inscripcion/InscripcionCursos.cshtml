@@ -1,0 +1,71 @@
+﻿@page
+@model CRM.Pages.IncripcionCursosModel
+@{
+}
+
+<a href="~/Inscripcion/VerInscripcion" class="btn btn-primary btn-lg btn-block mt-3 mb-5">Regresar</a>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Cliente">Cliente:</label>
+        <select asp-for="Cliente" id="Cliente" required>
+            <option value="">Seleccione un cliente</option>
+            @foreach (var cliente in Model.Clientes)
+            {
+                <option value="@cliente.Nombre">@cliente.Nombre</option>
+            }
+        </select><br>
+        <span asp-validation-for="Cliente" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Curso">Curso:</label>
+        <select asp-for="Curso" id="Curso" required>
+            <option value="">Seleccione un Curso</option>
+            @foreach (var curso in Model.Cursos)
+            {
+                <option value="@curso.Curso">@curso.Curso</option>
+            }
+        </select><br>
+        <span asp-validation-for="Curso" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FechaInicio">FechaInicio:</label>
+        <input asp-for="FechaInicio" type="date" required /><br>
+        <span asp-validation-for="FechaInicio" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FechaFin">FechaFin:</label>
+        <input asp-for="FechaFin" type="date" required /><br>
+        <span asp-validation-for="FechaFin" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Duracion">Duracion:</label>
+        <input asp-for="Duracion" type="text" class="form-control" required />
+        <span asp-validation-for="Duracion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Precio">Precio:</label>
+        <input asp-for="Precio" type="number" step="0.01" class="form-control" required />
+        <span asp-validation-for="Precio" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Estatus">Estatus:</label>
+        <select asp-for="Estatus" class="form-control" required>
+            <option value="Próximamente">Cancelado</option>
+            <option value="Realizado">Realizado</option>
+            <option value="Cancelado">Por Realizar</option>
+        </select><br>        <span asp-validation-for="Estatus" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">Agregar Inscripción</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

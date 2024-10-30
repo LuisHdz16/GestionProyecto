@@ -1,1 +1,3 @@
-Descripcion: 50% DE DESCUENTO EN MICROPIGMENTACION, FechaInicio: 06/01/0001, FechaFinal: 27/01/0001
+Tratamiento: Tratamiento A Descripcion: 50% DE DESCUENTO EN MICROPIGMENTACION PrecioNuevo: 1000 Estatus: Disponible
+Tratamiento: Tratamiento A Descripcion: Este curso es para la micrpigmentacion PrecioNuevo: 0 Estatus: No disponible
+Tratamiento: Tratamiento b Descripcion: 25% DE DESCUENTO PrecioNuevo: 25 Estatus: Disponible

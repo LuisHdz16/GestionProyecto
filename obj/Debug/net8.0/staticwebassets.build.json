@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MuCBkPu9tjfmQCHtYZVZtknaMjO4wnw4YsIm0IxZyCc=",
+  "Hash": "9Qx8tt2/Wx4cBo3Pug5h0nxUziNtREJ2L3VXP2Gw2zU=",
   "Source": "CRM",
   "BasePath": "_content/CRM",
   "Mode": "Default",
@@ -889,6 +889,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CRM.bundle.scp.css"
+    },
+    {
+      "Identity": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\citas.txt",
+      "SourceId": "CRM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\",
+      "BasePath": "_content/CRM",
+      "RelativePath": "citas.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\citas.txt"
     },
     {
       "Identity": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\css\\site.css",
@@ -2069,25 +2088,6 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\personasEncargadas.txt",
-      "SourceId": "CRM",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\",
-      "BasePath": "_content/CRM",
-      "RelativePath": "personasEncargadas.txt",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\personasEncargadas.txt"
-    },
-    {
       "Identity": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\promociones.txt",
       "SourceId": "CRM",
       "SourceType": "Discovered",
@@ -2105,25 +2105,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\promociones.txt"
-    },
-    {
-      "Identity": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\tratamientos.txt",
-      "SourceId": "CRM",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\",
-      "BasePath": "_content/CRM",
-      "RelativePath": "tratamientos.txt",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\tratamientos.txt"
     },
     {
       "Identity": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\pruebaSoftware\\CRM\\CRM\\wwwroot\\tratamientosdata.txt",

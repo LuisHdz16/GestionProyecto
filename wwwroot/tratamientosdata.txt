@@ -1,2 +1,2 @@
-Tratamiento: Tratamiento A Precio: 1000
-Tratamiento: Tratamiento b Precio: 200
+Tratamiento: Tratamiento A Precio: 2000
+Tratamiento: Tratamiento b Precio: 100

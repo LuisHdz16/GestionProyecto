@@ -1,4 +1,1 @@
-Nombre: Luis Hdz Telefono: 199999 Correo: fsdaf@gmail.com
-Nombre: fadsf sdaf Telefono: 1234567891 Correo: fsdaf@gmail.com
-Nombre: Mario Cantu Telefono: 123456789 Correo: luis1614@gmail.com
-Nombre: Toñito Ortega Telefono: 1234 Correo: tonito@hotmail.com
+Nombre: Luis Hdz Cnatu Telefono: 0 Correo: luis1614@gmail.com
